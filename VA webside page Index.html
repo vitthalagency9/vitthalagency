@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CHANGE YOUR WEBSITE TITLE HERE -->
+    <title>Vitthal Agency - Complete Exam Management Services</title>
+    
+    <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Load FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- EDIT YOUR THEME COLORS HERE -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',   /* Deep Blue */
+                            purple: '#5b21b6', /* Deep Purple */
+                            gold: '#f59e0b',   /* Rich Gold */
+                            goldLight: '#fcd34d',
+                            dark: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for animations */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased" id="home">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- CHANGE YOUR LOGO HERE -->
+                <!-- Make sure "VA Logo.jpg" is in the same folder as this HTML file -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home">
+                        <img src="VA Logo.jpg" alt="Vitthal Agency Logo" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-brand-blue font-medium transition">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-brand-blue font-medium transition">Our Services</a>
+                    <a href="#bundle" class="text-slate-600 hover:text-brand-blue font-medium transition">Exam Packages</a>
+                    <a href="#contact" class="px-6 py-2 bg-brand-gold hover:bg-amber-600 text-white font-semibold rounded-full shadow-md transition">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-1 shadow-lg absolute w-full">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-blue hover:bg-slate-50">Home</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-blue hover:bg-slate-50">Our Services</a>
+            <a href="#bundle" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-blue hover:bg-slate-50">Exam Packages</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gold hover:text-amber-600 hover:bg-slate-50">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-brand-blue to-brand-purple text-white pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                
+                <!-- CHANGE YOUR HERO HEADLINE HERE -->
+                <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-brand-goldLight font-medium text-sm mb-6 uppercase tracking-wider">
+                    Premier Exam Management
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Flawless Exam Execution for <br/>
+                    <span class="text-brand-goldLight">Institutions & Universities</span>
+                </h1>
+                
+                <!-- CHANGE YOUR HERO DESCRIPTION HERE -->
+                <p class="mt-4 text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    From certified invigilators and centre supervisors to complete end-to-end exam management, we provide secure, reliable, and professional testing solutions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services" class="px-8 py-4 bg-brand-gold hover:bg-amber-500 text-white font-bold rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        View Our Services
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Contact Us Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <!-- EDIT SECTION TITLE HERE -->
+                <h2 class="text-brand-gold font-bold tracking-wider uppercase text-sm mb-2">Revenue Streams & Services</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Expert Exam Solutions</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Invigilators -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover-lift">
+                    <div class="w-14 h-14 bg-brand-blue text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <!-- EDIT SERVICE 1 TEXT HERE -->
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Professional Invigilators</h4>
+                    <p class="text-slate-600 mb-4">Highly trained and verified invigilators for universities and exam agencies to ensure fair and strict exam environments.</p>
+                </div>
+
+                <!-- Service 2: Centre Supervisors -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover-lift">
+                    <div class="w-14 h-14 bg-brand-purple text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <!-- EDIT SERVICE 2 TEXT HERE -->
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Centre Supervisors</h4>
+                    <p class="text-slate-600 mb-4">Experienced leadership for both CBT (Computer Based Testing) and offline exam centres. Managing the entire floor flawlessly.</p>
+                </div>
+
+                <!-- Service 3: Exam Centre Booking -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover-lift">
+                    <div class="w-14 h-14 bg-brand-gold text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-building-circle-check"></i>
+                    </div>
+                    <!-- EDIT SERVICE 3 TEXT HERE -->
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Exam Centre Booking</h4>
+                    <p class="text-slate-600 mb-4">Streamlined booking services for exam conducting agencies. We secure premium, well-equipped locations for your tests.</p>
+                </div>
+
+                <!-- Service 4: Exam Distribution Staff -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover-lift">
+                    <div class="w-14 h-14 bg-brand-blue text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <!-- EDIT SERVICE 4 TEXT HERE -->
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Exam Distribution Staff</h4>
+                    <p class="text-slate-600 mb-4">Highly secure, confidential question-paper and sensitive material distribution handling to prevent any leaks or delays.</p>
+                </div>
+
+                <!-- Service 5: Full Exam Management -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover-lift md:col-span-2 lg:col-span-1 lg:col-start-2">
+                    <div class="w-14 h-14 bg-brand-purple text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <!-- EDIT SERVICE 5 TEXT HERE -->
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Full Exam Management</h4>
+                    <p class="text-slate-600 mb-4">End-to-end management tailored for universities, coaching institutes, and private testing companies. We handle everything.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Bundled Package Section (Highlight) -->
+    <section id="bundle" class="py-20 bg-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-brand-gold/20">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-10 lg:p-12 bg-gradient-to-br from-brand-blue to-brand-purple text-white flex flex-col justify-center">
+                        <span class="inline-block px-3 py-1 bg-brand-gold text-white text-xs font-bold rounded-full uppercase tracking-wider mb-4 w-max">Best Value</span>
+                        <!-- EDIT BUNDLE TITLE HERE -->
+                        <h3 class="text-3xl font-extrabold mb-4">Complete Exam Centre Package</h3>
+                        <p class="text-slate-200 mb-8">The ultimate, bundled solution for total peace of mind. Let Vitthal Agency handle every single aspect of your exam day.</p>
+                        <a href="#contact" class="px-6 py-3 bg-white text-brand-blue font-bold rounded-lg shadow hover:bg-slate-10 transition text-center w-max">
+                            Request a Custom Quote
+                        </a>
+                    </div>
+                    <div class="p-10 lg:p-12">
+                        <h4 class="text-xl font-bold text-slate-900 mb-6">What's Included in the Bundle:</h4>
+                        <ul class="space-y-4">
+                            <!-- EDIT BUNDLE ITEMS HERE -->
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-gold mt-1 text-lg"></i>
+                                <span class="text-slate-700 font-medium">Dedicated Centre Booking & Setup</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-gold mt-1 text-lg"></i>
+                                <span class="text-slate-700 font-medium">Certified Centre Supervisors & Support Staff</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-gold mt-1 text-lg"></i>
+                                <span class="text-slate-700 font-medium">Qualified & Professional Invigilators</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-gold mt-1 text-lg"></i>
+                                <span class="text-slate-700 font-medium">Streamlined Attendance & Coordination</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-gold mt-1 text-lg"></i>
+                                <span class="text-slate-700 font-medium">Final Post-Exam Reporting & Feedback</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-brand-dark pt-20 pb-10 text-white border-t-4 border-brand-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                
+                <!-- Contact Information Area -->
+                <div>
+                    <!-- EDIT CONTACT HEADER TEXT HERE -->
+                    <h2 class="text-3xl font-bold mb-6 text-white">Partner with Vitthal Agency</h2>
+                    <p class="text-slate-400 mb-8 max-w-md text-lg">
+                        Ready to secure your next examination event? Reach out to us for bookings, inquiries, and custom packages.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        
+                        <!-- EMAIL SECTION -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-gold">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-slate-400 font-semibold uppercase tracking-wider mb-1">Email Us</h4>
+                                <!-- CHANGE YOUR EMAIL HERE -->
+                                <a href="mailto:vitthalagency9@gmail.com" class="text-lg font-medium hover:text-brand-gold transition text-white">vitthalagency9@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- PHONE SECTION -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-brand-gold">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-slate-400 font-semibold uppercase tracking-wider mb-1">Call Us Directly</h4>
+                                <div class="flex flex-col space-y-1">
+                                    <!-- CHANGE YOUR PHONE NUMBERS HERE -->
+                                    <a href="tel:+916377341337" class="text-lg font-medium hover:text-brand-gold transition text-white">+91 63773 41337</a>
+                                    <a href="tel:+919461954171" class="text-lg font-medium hover:text-brand-gold transition text-white">+91 94619 54171</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form (Visual Demo) -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Send an Inquiry</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will contact you soon.');" class="space-y-4">
+                        <div>
+                            <input type="text" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-brand-gold" placeholder="Your Name or Institution" required>
+                        </div>
+                        <div>
+                            <input type="email" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-brand-gold" placeholder="Email Address" required>
+                        </div>
+                        <div>
+                            <textarea rows="3" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-brand-gold resize-none" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-gold hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                
+                <!-- CHANGE FOOTER LOGO HERE -->
+                <div class="bg-white p-2 rounded">
+                    <img src="VA Logo.jpg" alt="Vitthal Agency Logo" class="h-8 w-auto">
+                </div>
+                
+                <p class="text-slate-500 text-sm text-center">
+                    <!-- EDIT COPYRIGHT YEAR/TEXT HERE -->
+                    &copy; 2026 Vitthal Agency. All rights reserved.
+                </p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for mobile menu toggle -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('mobile-menu-hidden');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('mobile-menu-hidden');
+            });
+        });
+    </script>
+</body>
+</html>
